@@ -1,0 +1,36 @@
+{
+  "name": "jest-large-snapshot-warning",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Add warnings to large snapshots!",
+  "author": "Jo Maxx Blake <jo.maxx.blake@gmail.com>",
+  "files": [
+    "index.js",
+    "serializer.js",
+    "src"
+  ],
+  "scripts": {
+    "test": "jest --ci",
+    "prepublishOnly": "jest --ci --bail"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add",
+      "jest --ci --bail --findRelatedTests"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2"
+  },
+  "repository": "git@github.com:jomaxx/jest-large-snapshot-warning.git"
+}

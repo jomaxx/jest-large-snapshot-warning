@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`large snapshot 1`] = `
+WARNING: THIS IS A LARGE SNAPSHOT!
+
+Object {
+  "a": 1,
+  "b": 2,
+}
+`;
+
+exports[`small snapshot 1`] = `
+Object {
+  "a": 1,
+}
+`;
