@@ -20,11 +20,11 @@ test("large snapshot", () => {
 
 ### setMaxSnapshotSize
 
-The default max size is `50`.
+The default maximum line count for serialized snapshots is `50`.
 
 ```js
 // my.test.js
-import { setMaxSnapshotSize } "jest-large-snapshot-warning";
+import { setMaxSnapshotSize } from "jest-large-snapshot-warning";
 
 setMaxSnapshotSize(10);
 
@@ -35,11 +35,11 @@ test("large snapshot", () => {
 
 ### setupFiles
 
-To setup a max snapshot size for all test suites, use the [setupFiles](https://jestjs.io/docs/en/configuration.html#setupfiles-array) option in your jest config.
+To define a maximum snapshot line count for all test suites, use the [setupFiles](https://jestjs.io/docs/en/configuration.html#setupfiles-array) option in your jest config.
 
 ```js
 // setupTest.js
-import { setMaxSnapshotSize } "jest-large-snapshot-warning";
+import { setMaxSnapshotSize } from "jest-large-snapshot-warning";
 
 setMaxSnapshotSize(10);
 ```
